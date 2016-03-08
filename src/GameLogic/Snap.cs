@@ -38,6 +38,7 @@ namespace CardGames.GameLogic
 		{
 			_gameTimer = SwinGame.CreateTimer ();
 			_deck = new Deck ();
+			_deck.Shuffle();
 		}
 
 		/// <summary>
@@ -145,6 +146,10 @@ namespace CardGames.GameLogic
 			{
 				_score[player]++;
 				//TODO: consider playing a sound here...
+			}
+			else if ( player >= 0 && player < _score.Length)
+			{
+				_score[player]--;
 			}
 
 			// stop the game...
