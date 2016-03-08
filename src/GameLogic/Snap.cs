@@ -38,6 +38,7 @@ namespace CardGames.GameLogic
 		{
 			_gameTimer = SwinGame.CreateTimer ();
 			_deck = new Deck ();
+			_deck.Shuffle();
 		}
 
 		/// <summary>
